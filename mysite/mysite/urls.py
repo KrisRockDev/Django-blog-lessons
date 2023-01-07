@@ -24,5 +24,5 @@ urlpatterns = [
 ]
 
 # Формирование маршрута сохранения медиафайлов в отладочном режиме и на реальном сервере
-if settings.DEBAG:
+if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
