@@ -5,12 +5,12 @@
     </a>
     {% for item_category in categories %}
         {% if item_category.pk == category.pk %}
-        <a href="{% url 'category' item_category.pk %}" class="list-group-item list-group-item-action active"
+        <a href="{{ item_category.get_absolute_url }}" class="list-group-item list-group-item-action active"
            aria-current="true">
             {{ item_category }}
         </a>
         {% else %}
-        <a href="{% url 'category' item_category.pk %}" class="list-group-item list-group-item-action"
+        <a href="{{ item_category.get_absolute_url }}" class="list-group-item list-group-item-action"
            aria-current="true">
             {{ item_category }}
         </a>
