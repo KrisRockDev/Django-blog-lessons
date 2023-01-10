@@ -1,4 +1,5 @@
 {% load news_tags %}
+{% comment %}
 <div class="list-group">
     <a href="{% url 'home' %}" class="list-group-item list-group-item-action" aria-current="true">
         Все категории
@@ -22,3 +23,6 @@
 <br>
 
 {% show_categories arg1='Hello' arg2='user' %}
+{% endcomment %}
+
+{% show_categories %}

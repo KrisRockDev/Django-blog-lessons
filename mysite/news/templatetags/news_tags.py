@@ -14,6 +14,6 @@ def show_categories(argument1='Hello', argument2='world', ):
     categories = Category.objects.all()
     return {
         'categories': categories,
-        'arg1': argument1,
-        'arg2': argument2,
+        # 'arg1': argument1,
+        # 'arg2': argument2,
     }
