@@ -1,0 +1,24 @@
+{% load news_tags %}
+<div class="list-group">
+    <a href="{% url 'home' %}" class="list-group-item list-group-item-action" aria-current="true">
+        Все категории
+    </a>
+    {% get_list_categories as categories %}
+    {% for item_category in categories %}
+        {% if item_category.pk == category.pk %}
+        <a href="{% url 'category' item_category.pk %}" class="list-group-item list-group-item-action active"
+           aria-current="true">
+            {{ item_category }}
+        </a>
+        {% else %}
+        <a href="{% url 'category' item_category.pk %}" class="list-group-item list-group-item-action"
+           aria-current="true">
+            {{ item_category }}
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<br>
+
+{% show_categories arg1='Hello' arg2='user' %}
