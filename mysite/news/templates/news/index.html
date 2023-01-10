@@ -33,7 +33,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ item_news.title }}</h5>
                     <p class="card-text">{{ item_news.content|truncatewords:20 }}</p>
-                    <a href="#" class="btn btn-primary">Читать...</a>
+                    <a href="{{ item_news.get_absolute_url }}" class="btn btn-primary">Читать...</a>
                 </div>
             </div>
             <div class="card-footer text-muted text-end">
